@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+    z-index: -1;
+    overflow: hidden;
+    max-width: 600px;
+    align-items: center;
+}
+
+.first-circle {
+    background: rgb(191, 140, 213);
+    background: radial-gradient(circle, rgba(191, 140, 213, 1) 0%, rgba(140, 79, 172, 1) 48%, rgba(116, 50, 153, 1) 82%, rgba(72, 27, 92, 1) 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    animation-name: first-circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes first-circle {
+   0%{
+    left: 300px;
+    top: 100px;
+   }
+   50%{
+    left: 850px;
+    top: 350px;
+   }
+}
+
+.small-first-circle {
+    background: rgb(138,255,124);
+    background: radial-gradient(circle, rgba(138,255,124,1) 38%, rgba(19,108,49,1) 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 300px;
+    top: 80px;
+    animation-name: small-first-circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes small-first-circle{
+    0%{
+        right: 300px;
+        top: 80px;
+        
+       }
+    50%{
+        right: 980px;
+        top: 500px;
+    }
+    
+}
+
+
+.second-circle {
+    background: rgb(232, 167, 122);
+    background: radial-gradient(circle, rgba(232, 167, 122, 1) 0%, rgba(243, 113, 27, 1) 48%, rgba(210, 84, 2, 1) 82%, rgba(160, 65, 1, 1) 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    right: 300px;
+    top: 350px;
+    animation-name: second-circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes second-circle {
+    0%{
+        left: 730px;
+        top: 350px;
+        
+       }
+    50%{
+        left: 300px;
+        top: 100px;
+    }
+    100%{
+        left: 730px;
+        top: 350px;
+    }
+    
+}
+
+
+.small-second-circle {
+    background: rgb(128,124,255);
+    background: radial-gradient(circle, rgba(128,124,255,1) 38%, rgba(51,81,251,1) 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 250px;
+    top: 500px;
+    animation-name: small-second-circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    
+}
+
+@keyframes small-second-circle {
+    0%{
+        left: 250px;
+        top: 500px;
+    }
+    50%{
+        left: 900px;
+        top: 80px;
+    }
+}
+
+.blur-container{
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    color: #fff;
+    z-index: 1;
+}
+
+.card{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 480px;
+    background-color: rgba(255, 255, 255, 0.21);
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px white;
+    padding: 120px 30px ;
+}
+
+.user-info{
+    margin:15px 0px;
+    font-size: 15px;
+    outline: none;
+    background: none;
+    width: 100%;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+}
+
+.login-btn{
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    background: linear-gradient(30deg, 
+    rgba(210, 84, 2, 1) 0%,
+    rgb(166, 56, 19) 35%,
+    rgba(116, 50, 153, 1) 50%,
+    rgb(78, 38, 126) 75%,
+    rgb(72, 19, 218) 100%
+    );
+    
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.login-btn:hover{
+    scale: 1.1;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: gray;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background: linear-gradient(to right, 
+    rgba(210, 84, 2, 1) 0%,
+    rgb(166, 56, 19) 35%,
+    rgba(116, 50, 153, 1) 50%,
+    rgb(78, 38, 126) 75%,
+    rgb(72, 19, 218) 100%
+    );
+    opacity: 0.3;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background: linear-gradient(to right, 
+    rgba(210, 84, 2, 1) 0%,
+    rgb(166, 56, 19) 35%,
+    rgba(116, 50, 153, 1) 50%,
+    rgb(78, 38, 126) 75%,
+    rgb(72, 19, 218) 100%
+    );
+    border: none;
+    
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 7px;
+    top: 5px;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.forgot-pass a{
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .card{
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+
+  }
+
+
+
+
